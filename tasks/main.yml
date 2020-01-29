@@ -1,6 +1,7 @@
 ---
 # tasks file for apigee-opdk-setup-license
 - name: Assert target folder exists
+  become: yes
   file:
     path: "{{ opdk_license_target_file_path | dirname }}"
     state: directory
