@@ -8,7 +8,7 @@
     owner: "{{ opdk_user_name }}"
     group: "{{ opdk_group_name }}"
 
-    - name: Copy license file
+- name: Copy license file
   become: yes
   copy:
     src: "{{ opdk_license_source_file_name }}"
