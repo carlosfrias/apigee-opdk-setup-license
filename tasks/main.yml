@@ -5,7 +5,7 @@
   file:
     path: "{{ opdk_license_target_file_path | dirname }}"
     state: directory
-    mode: 0644
+    mode: 0655
     owner: "{{ opdk_user_name }}"
     group: "{{ opdk_group_name }}"
 
@@ -15,6 +15,6 @@
     src: "{{ opdk_license_source_file_name }}"
     dest: "{{ opdk_license_target_file_path }}"
     force: yes
-    mode: 0644
+    mode: 0655
     owner: "{{ opdk_user_name }}"
     group: "{{ opdk_group_name }}"
