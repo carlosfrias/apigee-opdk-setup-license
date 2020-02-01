@@ -21,4 +21,11 @@
 
 - name: Assert Permissions are Correct
   become: yes
-  command: chmod -R 777 {{ opdk_license_target_file_path | dirname }}
+  file:
+    path: "{{ opdk_license_target_file_path | dirname }}"
+    recurse: yes
+    mode: "777"
+    owner: '{{ opdk_user_name }}'
+    group: '{{ opdk_group_name }}'
+
+
